@@ -1,0 +1,13 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5439,
+    "username": "1111",
+    "password": "1111",
+    "database": "wallet-system",
+    "synchronize": true,
+    "entities": ["dist/**/*.entity{.ts,.js}"],
+    "migrations": ["dist/migration/*{.ts,.js}"],
+    "subscribers": ["dist/subscriber/*{.ts,.js}"]
+  }
+  
