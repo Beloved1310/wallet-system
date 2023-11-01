@@ -55,8 +55,6 @@ export class WalletController {
   async creditWallet(@Body() creditWalletDto: CreditWalletDto, @Req() request) {
     const { walletId, amount } = creditWalletDto;
     const user = request.user; // Get the authenticated user from the JWT token
-
-    // Call the WalletService method to credit the wallet
     const creditedWallet = await this.walletService.creditWallet(
       user,
       walletId,

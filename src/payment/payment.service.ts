@@ -71,8 +71,6 @@ export class PaymentService {
     // Calculate the start and end date for the specified month and year
     const startDate = new Date(year, month - 1, 1);
     const endDate = new Date(year, month, 0);
-
-    // Fetch payments within the specified time range
     const payments = await this.paymentRepository.find({
       where: {
         date: Between(startDate, endDate),
